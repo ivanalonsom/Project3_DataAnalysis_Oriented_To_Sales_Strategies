@@ -1,13 +1,6 @@
-def ini_API(url):
+def ini_cheapshark_API(url):
     import requests
-    # Parámetros para la solicitud (puedes personalizarlos según la documentación de la API)
-    # params = {
-    #     "storeID": 25,     # ID de la tienda (opcional)
-    #     "upperPrice": 100, # Precio máximo (opcional)
-    #     "pageNumber": 0   # Número de página (opcional)
-    # }
 
-    # Realizar la solicitud GET
     response = requests.get(url)
 
     if response.status_code == 200:
@@ -165,9 +158,15 @@ def disc_vs_punct_linear(df):
     plt.show()
 
 
+def ini_rawg_API():
+    
+
+
+
+
 def main(url):
 
-    dict_deals = ini_API(url)
+    dict_deals = ini_cheapshark_API(url)
     df_discounts = create_df(dict_deals)
     save_df(df_discounts)
 
