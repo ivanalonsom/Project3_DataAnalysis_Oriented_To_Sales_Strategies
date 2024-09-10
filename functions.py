@@ -50,7 +50,7 @@ def fill_lists(dict_deals):
         metacritic_list.append(float(x["metacriticScore"]))
 
         data_title = ini_rawg_API(x["title"])
-        genre_list.append(get_genre_list(data_title, game_title))
+        genre_list.append(get_genre_list(data_title, x["title"]))
 
     return  names_list, genre_list, shops_list, original_price_list, discount_price_list, perc_disc_list, metacritic_list
     
@@ -72,8 +72,9 @@ def save_df(df):
     from datetime import datetime
 
     actual_date = datetime.now().strftime("%d-%m-%Y")
+    actual_hour = datetime.now().strftime("%H")
 
-    df.to_csv(f"data/registro_{actual_date}")
+    df.to_csv(f"data/registro_{actual_date}_{actual_hour}horas")
 
 
 def ini_rawg_API(game):
@@ -115,7 +116,6 @@ def get_genre_list(data, game_title):
     genres_list = []
 
     for x in data["results"]:
-        values = []
         for y in x["genres"]:
             if x["name"] == game_title:
                 genres_list.append(y["name"]) 
@@ -123,30 +123,30 @@ def get_genre_list(data, game_title):
     return genres_list
 
 
-def get_genres_games_list(data):
-    game_title_list = []
-    genres_list = []
+# def get_genres_games_list(data):
+#     game_title_list = []
+#     genres_list = []
 
-    for x in data["results"]:
+#     for x in data["results"]:
         
-        game_title_list.append(x["name"])
-        values = []
+#         game_title_list.append(x["name"])
+#         values = []
 
-        for y in x["genres"]:
-                values.append(y["name"])
+#         for y in x["genres"]:
+#                 values.append(y["name"])
                 
-        genres_list.append(values)
+#         genres_list.append(values)
     
-    return game_title_list, genres_list
+#     return game_title_list, genres_list
 
 
-def create_rawg_df(data):
-    import pandas as pd
-    a, b = get_genres_games_list(data)
+# def create_rawg_df(data):
+#     import pandas as pd
+#     a, b = get_genres_games_list(data)
 
-    mix = list(zip(a, b))
-    df = pd.DataFrame(mix, columns=['title', 'genres'])
-    return df
+#     mix = list(zip(a, b))
+#     df = pd.DataFrame(mix, columns=['title', 'genres'])
+#     return df
 
 
 def main(url):
