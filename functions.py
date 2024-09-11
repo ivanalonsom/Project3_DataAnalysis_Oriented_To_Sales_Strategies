@@ -26,14 +26,17 @@ def get_dict_stores():
 def fill_lists(dict_deals):
 
     shops_list = []
+    dict_of_stores = get_dict_stores()
     names_list = []
     original_price_list = []
     discount_price_list = []
     perc_disc_list = []
     metacritic_list = []
 
+    
     genre_list = []
-    dict_of_stores = get_dict_stores()
+    released_list = []
+    
 
     for x in dict_deals:
 
@@ -51,18 +54,22 @@ def fill_lists(dict_deals):
 
         data_title = ini_rawg_API(x["title"])
         genre_list.append(get_genre_list(data_title, x["title"]))
+        released_list.append(get_release_date_list(data_title) )
 
-    return  names_list, genre_list, shops_list, original_price_list, discount_price_list, perc_disc_list, metacritic_list
+        #released_list.append(x["releaseDate"])
+
+
+    return  names_list, genre_list, released_list ,shops_list, original_price_list, discount_price_list, perc_disc_list, metacritic_list
     
 
 def create_cheapshark_df(dict_deals):
     import pandas as pd
 
-    a, b, c, d, e, f, g = fill_lists(dict_deals)
+    a, b, c, d, e, f, g, h = fill_lists(dict_deals)
 
-    lista_zip = list(zip(a, b, c, d, e, f, g))
+    lista_zip = list(zip(a, b, c, d, e, f, g, h))
 
-    df = pd.DataFrame(lista_zip, columns=['title', 'genre', 'shop', 'og_price', 'dc_price', 'discount_perc', 'metacritic'])
+    df = pd.DataFrame(lista_zip, columns=['title', 'genre', 'release_date', 'shop', 'og_price', 'dc_price', 'discount_perc', 'metacritic'])
 
     return df
 
@@ -123,14 +130,29 @@ def get_genre_list(data, game_title):
     return genres_list
 
 
+def get_release_date_list(data):
+
+    if "results" in data and len(data["results"]) > 0:
+            result = data["results"][0]
+            if "released" in result:
+                return result["released"]
+    return None
+
+
 def unroll_list_from_dfcolumn(df, column):
 
     df = df.explode(column)
     df.dropna(subset=column, inplace=True)
     return df
 
-def main(url):
 
+def clean_df_releases(df):
+    df.dropna(subset="release_date").reset_index(drop=True).sort_values("release_date")
+    return df
+
+
+def main(url):
+    
     dict_deals = ini_cheapshark_API(url)
     df_discounts = create_cheapshark_df(dict_deals)
     save_df(df_discounts)

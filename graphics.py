@@ -58,7 +58,7 @@ def min_max_disc_vs_shop_bar(df):
     plt.show()
 
 
-def disc_vs_punct_linear(df):
+def linear_graph_discounts_vs_punct_linear(df):
     import matplotlib.pyplot as plt
 
     df_plat_punt = df[df["metacritic"] > 0][["shop", "discount_perc", "metacritic"]]
@@ -105,17 +105,49 @@ def genre_vs_mean_discount_bar(df):
 def circular_pie_chart_genres(df):
     import matplotlib.pyplot as plt
 
-    # Crea un gráfico circular con el conteo de veces que aparece cada valor en la columna "genre"
+        # Crea un gráfico circular con el conteo de veces que aparece cada valor en la columna "genre"
     values = df['genre'].value_counts().values
     labels = df['genre'].value_counts().index
 
-    plt.pie(values, labels=labels, autopct='%1.1f%%')
+    plt.pie(values, labels=labels, autopct='%1.1f%%', textprops={'fontsize': 8, 'fontweight': 'normal'})
 
-    # Agrega un título al gráfico
-    plt.title('Genre')
+        # Agrega un título al gráfico
+    plt.title('Genres count')
 
-    # Muestra el gráfico
+        # Muestra el gráfico
     plt.show()
         
 
-    
+def linear_graph_discounts_vs_releasedate(df):
+    import matplotlib.pyplot as plt
+    import pandas as pd
+
+    df_plat_punt = df[df["metacritic"] > 0][["shop", "discount_perc", "release_date", "metacritic"]]
+
+    # Convertir la columna "release_date" a datetime
+    df_plat_punt['release_date'] = pd.to_datetime(df_plat_punt['release_date'])
+
+    # Extraer el mes y año de lanzamiento
+    df_plat_punt['month_year'] = df_plat_punt['release_date'].dt.to_period('M').dt.to_timestamp()
+
+    # Ordenar por "month_year"
+    df_plat_punt.sort_values(by="month_year", ascending=True, inplace=True)
+
+    plt.figure(figsize=(16, 10))
+    for tienda in df_plat_punt['shop'].unique():
+        df_tienda = df_plat_punt[df_plat_punt['shop'] == tienda]
+        plt.plot(df_tienda['month_year'], df_tienda['discount_perc'], label=tienda, marker=None)
+
+    # Agregamos título y etiquetas a los ejes
+    plt.title('Discount vs Release Date')
+    plt.xlabel('Release Date')
+    plt.ylabel('Discount')
+
+    # Agregamos leyenda
+    plt.legend()
+
+    # Rotar las etiquetas del eje X para mejor lectura
+    plt.xticks(rotation=45)
+
+    # Mostramos el gráfico
+    plt.show()
