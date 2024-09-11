@@ -98,7 +98,7 @@ def ini_rawg_API(game):
         'search_exact' : True
     }
     
-    time.sleep(1)
+    time.sleep(0.5)
 
     # Hacer la solicitud a la API
     response = requests.get(f'{base_url}/games', params=params)
@@ -123,31 +123,11 @@ def get_genre_list(data, game_title):
     return genres_list
 
 
-# def get_genres_games_list(data):
-#     game_title_list = []
-#     genres_list = []
+def unroll_list_from_dfcolumn(df, column):
 
-#     for x in data["results"]:
-        
-#         game_title_list.append(x["name"])
-#         values = []
-
-#         for y in x["genres"]:
-#                 values.append(y["name"])
-                
-#         genres_list.append(values)
-    
-#     return game_title_list, genres_list
-
-
-# def create_rawg_df(data):
-#     import pandas as pd
-#     a, b = get_genres_games_list(data)
-
-#     mix = list(zip(a, b))
-#     df = pd.DataFrame(mix, columns=['title', 'genres'])
-#     return df
-
+    df = df.explode(column)
+    df.dropna(subset=column, inplace=True)
+    return df
 
 def main(url):
 

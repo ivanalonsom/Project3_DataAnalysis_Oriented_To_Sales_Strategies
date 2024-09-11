@@ -5,7 +5,7 @@ def average_disc_vs_shop_bar(df):
     df_graf_barras = df.groupby('shop')['discount_perc'].mean().reset_index()
     # Same as df_graf_barras = df_all.groupby('shop').agg({'discount_perc' : 'mean'})
 
-    plt.figure(figsize=(15, 9))
+    plt.figure(figsize=(18, 12))
     plt.bar(df_graf_barras['shop'], df_graf_barras['discount_perc'])
 
     # Agregar etiquetas a cada barra
@@ -84,12 +84,12 @@ def disc_vs_punct_linear(df):
     plt.show()
 
 
-def genre_vs_discount_bar(df):
+def genre_vs_mean_discount_bar(df):
     import matplotlib.pyplot as plt
 
     df_graf_barras = df.groupby('genre')['discount_perc'].mean().reset_index()
 
-    plt.figure(figsize=(15, 9))
+    plt.figure(figsize=(16, 10))
     plt.bar(df_graf_barras['genre'], df_graf_barras['discount_perc'])
 
     # Agregar etiquetas a cada barra
@@ -100,3 +100,22 @@ def genre_vs_discount_bar(df):
     plt.xlabel('Genre')
     plt.ylabel('Average discount')
     plt.show()
+
+
+def circular_pie_chart_genres(df):
+    import matplotlib.pyplot as plt
+
+    # Crea un gráfico circular con el conteo de veces que aparece cada valor en la columna "genre"
+    values = df['genre'].value_counts().values
+    labels = df['genre'].value_counts().index
+
+    plt.pie(values, labels=labels, autopct='%1.1f%%')
+
+    # Agrega un título al gráfico
+    plt.title('Genre')
+
+    # Muestra el gráfico
+    plt.show()
+        
+
+    
