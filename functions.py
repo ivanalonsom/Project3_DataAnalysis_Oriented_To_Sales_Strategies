@@ -62,7 +62,7 @@ def create_cheapshark_df(dict_deals):
 
     lista_zip = list(zip(a, b, c, d, e, f, g))
 
-    df = pd.DataFrame(lista_zip, columns=['title', 'genre/s', 'shop', 'og_price', 'dc_price', 'discount_perc', 'metacritic'])
+    df = pd.DataFrame(lista_zip, columns=['title', 'genre', 'shop', 'og_price', 'dc_price', 'discount_perc', 'metacritic'])
 
     return df
 

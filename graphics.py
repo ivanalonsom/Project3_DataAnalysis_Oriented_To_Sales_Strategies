@@ -82,3 +82,21 @@ def disc_vs_punct_linear(df):
 
     # Mostramos el gráfico
     plt.show()
+
+
+def genre_vs_discount_bar(df):
+    import matplotlib.pyplot as plt
+
+    df_graf_barras = df.groupby('genre')['discount_perc'].mean().reset_index()
+
+    plt.figure(figsize=(15, 9))
+    plt.bar(df_graf_barras['genre'], df_graf_barras['discount_perc'])
+
+    # Agregar etiquetas a cada barra
+    for i, valor in enumerate(df_graf_barras['discount_perc']):
+        plt.text(i, valor + 1, f"{valor:.2f}", ha='center', va='bottom')
+
+    plt.title('Average discount vs genre')
+    plt.xlabel('Genre')
+    plt.ylabel('Average discount')
+    plt.show()
