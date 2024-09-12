@@ -3,61 +3,42 @@
 ## 🎮 Project: Video Game Deals Analysis
 Welcome to Video Game Deals Analyzer, a project designed to analyze and visualize video game deal data, providing valuable insights into discounts and trends over time.
 📋 Table of Contents
-Introduction
-Features
-Installation
-Usage
-Project Structure
-Example Graphs
-Contributing
-License
-📝 Introduction
+- Introduction
+- Features
+- Installation
+- Usage
+- Project Structure
+- Example Graphs
+- Contributing
+- License
+## 📝 Introduction
 This project collects data from various video game stores and analyzes the available deals. It uses different data analysis and visualization techniques to identify patterns and trends in video game discounts.
 
-✨ Features
+## ✨ Features
 Data Collection: Fetch up-to-date deal data from various video game stores.
 Discount Analysis: Analyze the discounts applied to video games over time.
 Data Visualization: Generate intuitive and attractive graphs to visualize discount trends.
-🛠️ Installation
+## 🛠️ Installation
 Clone this repository:
-
-bash
-Copiar código
-git clone https://github.com/your-username/video-game-deals-analyzer.git
+`git clone https://github.com/ivanalonsom/Project3_VideoGames_Sales.git`
 Navigate to the project directory:
-
-bash
-Copiar código
-cd video-game-deals-analyzer
+`cd video-game-deals-analyzer`
 Create and activate a virtual environment (optional but recommended):
-
-bash
-Copiar código
-python -m venv venv
-source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+`python -m venv venv
+source venv/bin/activate  # On Windows, use venv\Scripts\activate `
 Install the required dependencies:
-
-bash
-Copiar código
-pip install -r requirements.txt
-🚀 Usage
+`pip install -r requirements.txt`
+## 🚀 Usage
 Run the main script to execute the functions from the functions module and generate the graphs using the graphs module:
-
-bash
-Copiar código
-python main.py
-Modify the functions.py and graphs.py files to customize the data collection, analysis, and visualization according to your needs.
+`python main.py`
 
 📁 Project Structure
-bash
-Copiar código
-video-game-deals-analyzer/
+Project3_VideoGames_Sales
 │
 ├── data/                 # Directory to store collected data
-├── graphs/               # Directory to store generated graphs
 ├── main.py               # Main script to run the project
 ├── functions.py          # Functions for data collection and analysis
-├── graphs.py             # Functions for data visualization
+├── graphics.py           # Functions for data visualization
 ├── README.md             # Project README
 └── requirements.txt      # Python dependencies
 📊 Example Graphs
