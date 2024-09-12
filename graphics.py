@@ -24,7 +24,7 @@ def average_disc_vs_shop_bar(df):
 
     plt.title('Average discount vs Shop')
     plt.xlabel('Shop')
-    plt.ylabel('Average discount')
+    plt.ylabel('Average discount %')
     plt.show()
 
 
@@ -105,7 +105,7 @@ def linear_graph_discounts_vs_punct_linear(df):
 
     plt.title('Discount vs punctuation')
     plt.xlabel('Punctuation')
-    plt.ylabel('Discount')
+    plt.ylabel('Discount %')
 
     plt.legend()
 
@@ -137,7 +137,7 @@ def genre_vs_mean_discount_bar(df):
 
     plt.title('Average discount vs genre')
     plt.xlabel('Genre')
-    plt.ylabel('Average discount')
+    plt.ylabel('Average discount %')
     plt.show()
 
 
@@ -203,7 +203,7 @@ def linear_graph_discounts_vs_releasedate(df):
     # Agregamos título y etiquetas a los ejes
     plt.title('Discount vs Release Date')
     plt.xlabel('Release Date')
-    plt.ylabel('Discount')
+    plt.ylabel('Discount %')
 
     # Agregamos leyenda
     plt.legend()

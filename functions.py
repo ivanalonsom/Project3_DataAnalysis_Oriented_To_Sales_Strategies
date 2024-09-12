@@ -27,6 +27,53 @@ def ini_cheapshark_API(url):
     return dict_deals
 
 
+def ini_rawg_API(game):
+
+    """
+    This function connects to the RAWG API to search for information about a specific video game.
+    
+    Parameters:
+        game (str): The title of the video game being searched for.
+    
+    Returns:
+        dict: A dictionary containing information about the video game from the RAWG API.
+    
+    Purpose:
+        To retrieve detailed information about a video game from the RAWG API, including its genre and release date.
+    """
+    
+    import os
+    from dotenv import load_dotenv
+    import requests
+    import time
+
+    # Tu clave API de RAWG
+
+    api_key = os.getenv("api_key")
+
+    # URL de la API de RAWG
+    base_url = 'https://api.rawg.io/api'
+
+    # Parámetros de la solicitud (ejemplo: buscar juegos con la palabra "cyberpunk")
+    params = {
+        'key': api_key,
+        'search': game,
+        'search_exact' : True
+    }
+    
+    time.sleep(0.5)
+
+    # Hacer la solicitud a la API
+    response = requests.get(f'{base_url}/games', params=params)
+
+    # Verificar si la solicitud fue exitosa
+    if response.status_code == 200:
+        # Obtener los datos en formato JSON
+        data = response.json()
+
+    return data
+
+
 def get_dict_stores():
 
     """
@@ -144,53 +191,6 @@ def save_df(df):
     actual_hour = datetime.now().strftime("%H")
 
     df.to_csv(f"data/registro_{actual_date}_{actual_hour}horas")
-
-
-def ini_rawg_API(game):
-
-    """
-    This function connects to the RAWG API to search for information about a specific video game.
-    
-    Parameters:
-        game (str): The title of the video game being searched for.
-    
-    Returns:
-        dict: A dictionary containing information about the video game from the RAWG API.
-    
-    Purpose:
-        To retrieve detailed information about a video game from the RAWG API, including its genre and release date.
-    """
-    
-    import os
-    from dotenv import load_dotenv
-    import requests
-    import time
-
-    # Tu clave API de RAWG
-
-    api_key = os.getenv("api_key")
-
-    # URL de la API de RAWG
-    base_url = 'https://api.rawg.io/api'
-
-    # Parámetros de la solicitud (ejemplo: buscar juegos con la palabra "cyberpunk")
-    params = {
-        'key': api_key,
-        'search': game,
-        'search_exact' : True
-    }
-    
-    time.sleep(0.5)
-
-    # Hacer la solicitud a la API
-    response = requests.get(f'{base_url}/games', params=params)
-
-    # Verificar si la solicitud fue exitosa
-    if response.status_code == 200:
-        # Obtener los datos en formato JSON
-        data = response.json()
-
-    return data
 
 
 def get_genre_list(data, game_title):
