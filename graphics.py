@@ -128,7 +128,7 @@ def genre_vs_mean_discount_bar(df):
 
     df_graf_barras = df.groupby('genre')['discount_perc'].mean().reset_index()
 
-    plt.figure(figsize=(16, 10))
+    plt.figure(figsize=(24, 10))
     plt.bar(df_graf_barras['genre'], df_graf_barras['discount_perc'])
 
     # Agregar etiquetas a cada barra
