@@ -17,7 +17,12 @@ def ini_cheapshark_API(url):
         
     import requests
 
+    # params = {
+    #     'sortBy' : 'Recent'
+    # }
+
     response = requests.get(url)
+    # response = requests.get(url, params=params)   We could use this line instead of the previous one if we wanted to sort by the most recently added games.
 
     if response.status_code == 200:
         dict_deals = response.json()
