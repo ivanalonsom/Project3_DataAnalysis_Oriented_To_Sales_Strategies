@@ -66,3 +66,5 @@ Contributions are welcome! Please follow these steps to contribute:
 - https://github.com/ivanalonsom  
 - https://github.com/mjimcode
 
+## 📝 Link to the slide presentation (spanish)
+  https://docs.google.com/presentation/d/1MOzTYnfQh2p2-W3pegoZOy8caBoqv0sD/edit?usp=drive_link&ouid=112738522280937522947&rtpof=true&sd=true
