@@ -1,0 +1,61 @@
+,title,genre,release_date,shop,og_price,dc_price,discount_perc,metacritic
+0,Rugrats: Adventures in Gameland,"['Platformer', 'Action']",2024-09-10,Epic Games Store,24.99,0.00,100.0,0.0
+1,Super Crazy Rhythm Castle,[],2023-11-13,Epic Games Store,39.99,0.00,100.0,0.0
+2,The Incredible Adventures of Van Helsing Anthology,[],,GamersGate,74.99,5.63,92.49,0.0
+3,Assassin's Creed Odyssey - Deluxe Edition,[],,Humble Store,79.99,11.99,85.01,0.0
+4,Inertial Drift,"['Racing', 'Indie']",2020-09-11,Steam,19.99,0.99,95.05,89.0
+5,Cycling Bundle 2021,[],,GamersGate,69.58,7.83,88.75,0.0
+6,Tennis World Tour Legends Edition,[],,GamersGate,69.98,7.88,88.74,0.0
+7,Assassin's Creed Odyssey - Deluxe Edition,[],,Gamesplanet,79.99,11.19,86.01,0.0
+8,Warhammer Age of Sigmar: Realms of Ruin Ultimate Edition,[],,IndieGala,74.99,12.29,83.61,0.0
+9,Assassins Creed Valhalla Deluxe Edition,[],,Humble Store,79.99,15.99,80.01,0.0
+10,Assassins Creed Origins Gold Edition,[],,Gamesplanet,99.99,13.88,86.12,0.0
+11,Assassins Creed Odyssey Gold Edition,[],,Gamesplanet,99.99,13.99,86.01,0.0
+12,BioShock Infinite,"['Shooter', 'Action']",2013-03-26,WinGameStore,29.99,4.49,85.03,94.0
+13,Warhammer Age of Sigmar: Realms of Ruin Ultimate Edition,[],,Noctre,74.99,14.25,81.0,0.0
+14,Assassins Creed Odyssey Ultimate Edition,[],,Gamesplanet,119.99,16.69,86.09,0.0
+15,Warhammer Age of Sigmar: Realms of Ruin Ultimate Edition,[],,Gamesplanet,74.99,13.49,82.01,0.0
+16,Warhammer Age of Sigmar: Realms of Ruin Ultimate Edition,[],,GamersGate,74.99,13.50,82.0,0.0
+17,Watch Dogs: Legion Gold Edition,[],,Humble Store,99.99,19.99,80.01,0.0
+18,Assassins Creed Valhalla - Ragnark Edition,[],,Humble Store,99.99,19.99,80.01,0.0
+19,Sid Meiers Civilization VI: Platinum Edition,[],,GreenManGaming,79.99,10.44,86.95,0.0
+20,Darksiders Blades and Whip Franchise Pack,[],,GOG,79.99,15.99,80.01,0.0
+21,NHRA: Speed for All - Ultimate Edition,[],,Epic Games Store,79.99,7.99,90.01,0.0
+22,Watch Dogs: Legion Ultimate Edition,[],,Humble Store,119.99,23.99,80.01,0.0
+23,Arcade Spirits,"['Indie', 'Adventure', 'Simulation']",2020-11-30,Steam,19.99,0.99,95.05,78.0
+24,Injustice 2,['Fighting'],2017-05-09,Steam,49.99,4.99,90.02,86.0
+25,The Crew 2 Gold Edition,[],,Uplay,89.99,18.00,80.0,0.0
+26,Chivalry - 4 Pack,[],,GreenManGaming,74.99,12.00,84.0,0.0
+27,Assassins Creed Valhalla Deluxe Edition,[],,Gamesplanet,79.99,14.75,81.56,0.0
+28,Frostpunk,"['Strategy', 'Simulation']",2018-04-24,Steam,29.99,2.99,90.03,84.0
+29,Nickelodeon All-Star Brawl 2,['Action'],2023-11-07,GamersGate,49.99,4.25,91.5,73.0
+30,Watch Dogs: Legion Gold Edition,[],,Uplay,99.99,20.00,80.0,0.0
+31,Warhammer Age of Sigmar: Realms of Ruin Ultimate Edition,[],,GreenManGaming,74.99,12.60,83.2,0.0
+32,Syberia II,[],2004-03-28,Humble Store,12.99,1.29,90.07,80.0
+33,Assassins Creed Valhalla - Ragnark Edition,[],,Gamesplanet,99.99,17.99,82.01,0.0
+34,Aggelos,"['Indie', 'Adventure', 'Action', 'RPG']",2018-06-19,Steam,14.99,0.89,94.06,76.0
+35,Driftland: The Magic Revival,"['Strategy', 'Indie', 'Simulation']",2017-11-15,GOG,19.99,1.19,94.05,76.0
+36,Torchlight II,[],,DLGamer,19.99,3.60,81.99,88.0
+37,GUILTY GEAR Xrd -SIGN-,[],2014-12-04,Steam,29.99,2.99,90.03,84.0
+38,Shadow Tactics: Blades of the Shogun,"['Strategy', 'Indie']",2016-12-05,Noctre,39.99,3.60,91.0,85.0
+39,Stealth Bastard Deluxe,"['Indie', 'Action']",2012-11-28,Humble Store,9.99,0.99,90.09,80.0
+40,When Ski Lifts Go Wrong,"['Puzzle', 'Casual', 'Simulation', 'Sports', 'Indie']",2019-01-23,Steam,14.99,1.49,90.06,80.0
+41,Riders Republic 360 Edition,[],,GreenManGaming,79.99,17.60,78.0,0.0
+42,WRC 8 FIA World Rally Championship,"['Racing', 'Arcade']",2019-09-10,GreenManGaming,29.99,2.34,92.2,77.0
+43,Stealth Bastard Deluxe,"['Indie', 'Action']",2012-11-28,Steam,9.99,1.09,89.09,80.0
+44,Tom Clancy's Splinter Cell Chaos Theory,"['Adventure', 'Action']",2005-03-21,Humble Store,9.99,2.49,75.08,92.0
+45,Bridge Constructor Portal,"['Strategy', 'Simulation', 'Puzzle']",2017-12-19,GOG,9.99,0.99,90.09,77.0
+46,Yooka-Laylee and the Impossible Lair,"['Indie', 'Platformer', 'Adventure']",2019-10-07,Steam,29.99,2.99,90.03,81.0
+47,Mordheim: City of the Damned,"['Strategy', 'RPG']",2015-11-18,GreenManGaming,19.99,1.56,92.2,74.0
+48,Stealth Inc. 2: A Game of Clones,[],2014-10-30,Steam,14.99,1.49,90.06,77.0
+49,Assassins Creed Valhalla - Complete Edition,[],,Gamesplanet,139.99,24.99,82.15,0.0
+50,Deus Ex: Human Revolution - Director's Cut,"['Action', 'RPG']",2013-10-22,GreenManGaming,19.99,2.52,87.39,91.0
+51,Robin Hood: The Legend of Sherwood,['Strategy'],2002-11-13,Noctre,7.99,0.72,90.99,80.0
+52,BATTLETECH Mercenary Collection,[],2018-10-17,GOG,89.99,21.59,76.01,0.0
+53,Star Wars: Knights of the Old Republic,"['Action', 'RPG']",2003-07-15,Noctre,9.99,2.40,75.98,93.0
+54,Riders Republic - Complete Edition,[],,GreenManGaming,99.99,22.00,78.0,0.0
+55,When Ski Lifts Go Wrong,"['Puzzle', 'Casual', 'Simulation', 'Sports', 'Indie']",2019-01-23,Noctre,14.99,1.35,90.99,80.0
+56,DEATHLOOP - Deluxe Edition,[],,Humble Store,79.99,15.99,80.01,0.0
+57,Truberbrook,[],,Gamesplanet,29.99,1.35,95.5,66.0
+58,Goodbye Deponia,"['Adventure', 'RPG']",2013-10-15,Noctre,19.99,1.80,91.0,80.0
+59,Tom Clancy's Splinter Cell,"['Adventure', 'Action']",2002-11-17,Humble Store,9.99,2.49,75.08,91.0
