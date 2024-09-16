@@ -1,4 +1,4 @@
-# 🕹️ Data Analysis oriented to sales strategies
+# 📊 Data Analysis oriented to sales strategies
 
 ## 🎮 Project: Data Analysis oriented to sales strategies
 Welcome to Data Analysis oriented to sales strategies. We have focused our project on videogame sales as it is a wide and growing market and real time deal data is easily accesible, providing valuable insights into discounts and trends over time.
