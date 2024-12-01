@@ -1,7 +1,7 @@
-# 🕹️ Video Game Deals Analyzer
+# 📊 Data Analysis oriented to sales strategies
 
-## 🎮 Project: Video Game Deals Analysis
-Welcome to Video Game Deals Analyzer, a project designed to analyze and visualize video game deal data, providing valuable insights into discounts and trends over time.
+## 🎮 Project: Data Analysis Oriented To Sales Strategies
+Welcome to data analysis oriented to sales strategies. We have focused our project on videogame sales as it is a wide and growing market and real time deal data is easily accesible, providing valuable insights into discounts and trends over time.
 ## 📋 Table of Contents
 - Introduction
 - Features
